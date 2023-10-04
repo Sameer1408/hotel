@@ -1,0 +1,109 @@
+
+.Card{
+    width: 24vw;
+    margin:1.2vw;
+    /* border: 1px solid; */
+    height: 55vh;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.247);
+  }
+  
+  .CardImg{
+    width:100%;
+    height:30vh;
+    overflow: hidden;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .CardImg button{
+    font-size: 1vw;
+    padding: 1px 8px;
+    font-weight: 600;
+    color:  rgb(38, 0, 255);
+    border-radius:100px ;
+  }
+
+  .loc{
+    display: flex;
+    padding:0.6vw 1vw;
+    font-size: 0.9vw;
+    font-weight: 500;
+    z-index: 0;
+   }
+
+   .loc i{
+    margin-right:2px;
+    color: orangered;
+  }
+
+  .name{
+    text-align: left;
+    padding: 0px 1vw;
+    position: relative;
+    top: -4vh;
+    line-height: 1;
+    font-weight: 500;
+    font-size:1.1vw;
+    z-index: 0;
+  }
+
+  .iconDiv{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1vw;
+    position: relative;
+    top: -6vh;
+    z-index: 0;
+  }
+
+  .iconDiv div{
+    text-align: left;
+  }
+
+  .iconDiv p{
+    font-size: 1vw;
+    line-height: 1;
+  }
+
+  .last{
+    /* border: 1px solid; */
+    position: relative;
+    top: -8vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1vw;
+    align-items: center;
+
+  }
+
+  .last p{
+    color:  rgb(38, 0, 255);
+    position: relative;
+    top: 0.8vh;
+  }
+
+  .last p span{
+    color: black;
+    font-size: 1vw;
+    margin-left: 2px;
+  }
+
+  .last button{
+    font-size: 1vw;
+    padding: 1px 8px;
+    font-weight: 600;
+    color:  rgb(38, 0, 255);
+    border-radius:100px ;
+    border: 1px solid black;
+    background-color: white;    
+  }

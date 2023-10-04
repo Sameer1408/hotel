@@ -1,0 +1,34 @@
+
+.cityButton{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+ 
+}
+
+.cityButton button{
+    margin:0px 10px;
+    padding:2px 8px;
+    /* background-color: rgb(38, 0, 255); */
+    color: rgb(38, 0, 255);
+    font-size: 1vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.521);
+    font-weight: 500;
+    background-color: white;
+}
+
+.cityButton button:hover{
+    background-color: rgb(38, 0, 255);
+    color: white;
+}
+
+#viewAll{
+border: 1px solid rgba(38, 0, 255, 0.452);
+background-color: white;
+}
+
+#viewAll:hover{
+    background-color: rgb(38, 0, 255);
+}

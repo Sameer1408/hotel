@@ -1,0 +1,41 @@
+.top{
+    text-align: center;
+    background-color: white;
+    z-index: 100;
+}
+
+.top h1{
+    line-height:0.8;
+}
+
+.top p{
+    margin: auto;
+    width:30%;
+    font-size: 1vw;
+}
+
+.dashBoard{
+    margin-top:24vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.showDiv{
+    text-align: center;
+    margin:20px 0px;
+}
+
+.showMore{
+    text-align: center;
+    margin: auto;
+    padding:2px 8px;
+    background-color: rgb(38, 0, 255);
+    color:white;
+    font-size: 1.2vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(128, 128, 128);
+    font-weight: 400;
+}
