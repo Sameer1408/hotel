@@ -3,6 +3,7 @@ import './App.css';
 import DashBoard from './Components/DashBoard';
 import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import { useState } from 'react';
+import Property from './Components/Property';
 
 function App() {
 
@@ -10,12 +11,13 @@ function App() {
   const [data,setData] = useState({});
   const [img,setImg] = useState("")
 
+
   return (
     <Router>  
     <div className="">
     <Routes>
-      <Route path="/" exact element={<DashBoard  setId={setId}/>} ></Route>
-      <Route path={`property/${id}`}></Route>
+      <Route path="/" exact element={<DashBoard setData={setData} setImg={setImg} setId={setId}/>} ></Route>
+      <Route path={`property/${id}`} exact element={<Property data={data} img={img} />}></Route>
        </Routes>
          </div>
     </Router>

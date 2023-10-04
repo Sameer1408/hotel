@@ -1,7 +1,9 @@
 import "./Card.css"
-function Card({ ele, image }) {
+function Card({ index,ele, image,HandleCardSelect}) {
   return (
-    <div className="Card">
+    <div className="Card" onClick={(e)=>{
+      HandleCardSelect( index,ele, image)
+    }}>
       <div>
         <div className="CardImg" style={{ backgroundImage: `url(${image})` }}>
           <button className="btn" >
@@ -37,7 +39,7 @@ function Card({ ele, image }) {
         </div>
         <div className="last">
           <p>{ele.rent}<span>/month</span></p>
-          <button className="btn">Read More</button>
+          <button style={{zIndex:0}} className="btn">Read More</button>
         </div>
       </div>
     </div>

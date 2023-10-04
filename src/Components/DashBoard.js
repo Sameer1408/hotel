@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { getHotels } from '../state/action-creators';
 import { useNavigate } from 'react-router-dom';
 
-function DashBoard({setId}) {
+function DashBoard({setId,setData,setImg}) {
     const navigate = useNavigate();
     const [allHotel,setAllHotel] = useState([]);
     const [arr,setArr] = useState([]);
@@ -71,6 +71,14 @@ function DashBoard({setId}) {
        dispatch(getHotels());
     },[])
 
+    const HandleCardSelect=(index,ele,src)=>{
+        setId(index+1);
+        setData(ele);
+        setImg(src);
+        navigate(`property/${index+1}`)
+        
+    }
+
     return (
     <div className="">
     <div style={{
@@ -90,19 +98,16 @@ function DashBoard({setId}) {
     <div className='dashBoard'>
     {loading?<h1>loading .. ..</h1>:
                     arr.length > 0 ?
-                        arr?.map(ele => {
+                        arr?.map((ele,index) => {
                             var base64 = btoa(
                                 new Uint8Array(ele?.img?.data?.data)
                                     .reduce((data, byte) => data + String.fromCharCode(byte), '')
                             );
                             var src = `data:image/png;base64,${base64}`
-                            return <Card onClick={(e)=>{
-                                setId(ele._id)
-                            }}  image={src} ele={ele} />
+                            return <Card index={index} HandleCardSelect={HandleCardSelect} image={src} ele={ele} />
                         })
                         : <h1>No More Cars to Show</h1>
                 }
-
     </div>
     <div className='showDiv'>
     <button className='btn showMore'
